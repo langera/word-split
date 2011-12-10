@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     debug="false">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p %t [%c{1}] %m%n"/>
+        </layout>
+    </appender>
+    
+    <logger name="com.lewisd.jmicrobench">
+		<level value="INFO" />
+	</logger>
+
+	<!-- Useful for listing the output from the admin APIs. -->
+    <logger name="com.lmax.exchange.acceptance.framework">
+		<level value="ERROR" />
+	</logger>
+
+    <logger name="com.lmax.exchange.acceptance.framework.driver.http.HttpDriver">
+		<level value="INFO" />
+	</logger>
+
+    <logger name="com.lmax.exchange.acceptance.dsl.language.SystemUtil">
+		<level value="DEBUG" />
+	</logger>
+
+	<!-- Useful for listing the output from the public APIs. -->
+    <logger name="com.lmax.exchange.client.api">
+		<level value="ERROR" />
+	</logger>
+		
+    <logger name="com.lmax.exchange.client">
+        <level value="DEBUG" />
+    </logger>
+        
+    <logger name="com.lmax.exchange.acceptance.dsl">
+        <level value="INFO" />
+    </logger>
+        
+    <logger name="com.lmax.exchange.tool">
+        <level value="INFO" />
+    </logger>
+        
+    <logger name="com.lmax.exchange.stub.flooding">
+        <level value="INFO" />
+    </logger>
+
+    <logger name="com.lmax.commons.junit">
+        <level value="DEBUG" />
+    </logger>
+        
+    <root>
+        <priority value="WARN"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</log4j:configuration>
